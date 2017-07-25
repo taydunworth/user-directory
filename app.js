@@ -12,7 +12,7 @@ app.set('view engine', 'mustache')
 
 //Listening on root
 app.get('/', function (req, res) {
-  res.render('directory-list')
+  res.render('directory-list', data)
 })
 
 app.listen(3000, function () {

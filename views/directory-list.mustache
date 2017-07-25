@@ -7,5 +7,14 @@
   </head>
   <body>
     <h1>Index</h1>
+    <section class="directory-box">
+      {{#users}}
+      <div class="user">
+        <img src="{{avatar}}">
+        <h2>{{name}}</h2>
+        <p>{{job}} {{company}}</p>
+      </div>
+      {{/users}}
+    </section>
   </body>
 </html>

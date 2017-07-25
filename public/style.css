@@ -1,3 +1,17 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+}
+
+.directory-box {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.user {
+  width: 23%;
+  padding: 10px 10px 10px 0;
 }
