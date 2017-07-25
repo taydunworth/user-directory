@@ -15,6 +15,19 @@ app.get('/', function (req, res) {
   res.render('directory-list', data)
 })
 
+app.get('/users/:username', (request, response) => {
+  const profileData = {
+    username: request.params.username
+  }
+
+  function findUser(user) {
+    return user.username === profileData.username
+  }
+
+  const oneUser = data.users.find(findUser)
+    response.render('users', oneUser)
+})
+
 app.listen(3000, function () {
   console.log('Successfully started express application!');
 })
