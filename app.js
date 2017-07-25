@@ -10,14 +10,13 @@ app.engine('mustache', mustacheExpress());
 app.set('views', './views')
 app.set('view engine', 'mustache')
 
-//Listening on root
 app.get('/', function (req, res) {
   res.render('directory-list', data)
 })
 
-app.get('/users/:username', (request, response) => {
+app.get('/users/:username', (req, res) => {
   const profileData = {
-    username: request.params.username
+    username: req.params.username
   }
 
   function findUser(user) {
@@ -25,7 +24,7 @@ app.get('/users/:username', (request, response) => {
   }
 
   const oneUser = data.users.find(findUser)
-    response.render('users', oneUser)
+    res.render('users', oneUser)
 })
 
 app.listen(3000, function () {

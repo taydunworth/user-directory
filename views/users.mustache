@@ -2,20 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>User Directory</title>
+    <title>{{name}} Profile</title>
     <link href="/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <div class="wrapper">
-      <h1>Index</h1>
-      <section class="directory-box">
-        {{#users}}
-        <div class="user">
-          <img src="{{avatar}}">
-          <h2><a href="/users/{{username}}">{{name}}</a></h2>
-          <p>{{job}} {{company}}</p>
-        </div>
-        {{/users}}
+      <section class="user-box">
+        <img src="{{avatar}}">
+        <h1>{{name}}</h1>
+        <p>{{#address}}{{#city}}{{city}},{{/city}} {{#country}}{{country}}{{/country}}{{/address}} | {{#job}}{{job}},{{/job}} {{^job}}Available for Hire{{/job}} {{#company}}{{company}}{{/company}}</p>
+
+        <p>{{#university}}Education: {{university}}{{/university}}</p>
+        <p>Skills: {{skills}}</p>
       </section>
     </div>
   </body>
