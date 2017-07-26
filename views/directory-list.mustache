@@ -11,7 +11,7 @@
       <section class="directory-box">
         {{#users}}
         <div class="user">
-          <img src="{{avatar}}">
+          <a href="/users/{{username}}"><img src="{{avatar}}"></a>
           <h2><a href="/users/{{username}}">{{name}}</a></h2>
           <p>{{#job}}{{job}}{{/job}} {{#company}}{{company}}{{/company}}</p>
           <p>{{^job}}<span class="available">Available for Hire</span>{{/job}}</p>

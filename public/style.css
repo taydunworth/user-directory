@@ -67,7 +67,10 @@ ul {
 .user img {
   width: 70%;
   height: 70%;
-  margin: 0px auto;
+}
+
+.user a {
+  text-align: center;
 }
 
 .available {
