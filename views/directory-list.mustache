@@ -13,7 +13,8 @@
         <div class="user">
           <img src="{{avatar}}">
           <h2><a href="/users/{{username}}">{{name}}</a></h2>
-          <p>{{job}} {{company}}</p>
+          <p>{{#job}}{{job}}{{/job}} {{#company}}{{company}}{{/company}}</p>
+          <p>{{^job}}<span class="available">Available for Hire</span>{{/job}}</p>
         </div>
         {{/users}}
       </section>

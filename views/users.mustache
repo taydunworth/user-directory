@@ -8,12 +8,33 @@
   <body>
     <div class="wrapper">
       <section class="user-box">
-        <img src="{{avatar}}">
-        <h1>{{name}}</h1>
-        <p>{{#address}}{{#city}}{{city}},{{/city}} {{#country}}{{country}}{{/country}}{{/address}} | {{#job}}{{job}},{{/job}} {{^job}}Available for Hire{{/job}} {{#company}}{{company}}{{/company}}</p>
-
-        <p>{{#university}}Education: {{university}}{{/university}}</p>
-        <p>Skills: {{skills}}</p>
+        <div class="top-box">
+          <div class="img-box">
+            <img src="{{avatar}}">
+          </div>
+          <div class="info-box">
+            <h1>{{name}}</h1>
+            <p>{{#address}}{{#city}}{{city}},{{/city}} {{#country}}{{country}}{{/country}}{{/address}} | {{#job}}{{job}},{{/job}} {{^job}}<span class="available">Available for Hire</span>{{/job}} {{#company}}{{company}}{{/company}}</p>
+            <p>{{email}} | {{phone}}</p>
+        </div>
+        </div>
+        <div class="bottom-box">
+          <div class="edu-box">
+            {{#university}}
+            <h5>Education</h5>
+            <p>{{university}}</p>
+            {{/university}}
+          </div>
+          <div class="skill-box">
+            <h5>Skills</h5>
+            <ul>
+            {{#skills}}
+            <li>{{.}}</li>
+            {{/skills}}
+            </ul>
+          </div>
+        </div>
+        <a href="/" class="btn">Back</a>
       </section>
     </div>
   </body>
